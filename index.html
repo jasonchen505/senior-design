@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A remote environment recording system with online access portals</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>real-time soil data</h1>
+    <canvas id="soilChart"></canvas>
+    <div id="imageContainer"></div>
+
+<!--     <script> -->
+        // // 从外部 API 获取数据
+        // async function fetchData() {
+        //     const response = await fetch('https://api.example.com/soil-data');
+        //     const data = await response.json();
+        //     return data;
+        // }
+
+        // 绘制图表（使用 Chart.js）
+        // function renderChart(data) {
+        //     const ctx = document.getElementById('soilChart').getContext('2d');
+        //     new Chart(ctx, {
+        //         type: 'line',
+        //         data: {
+        //             labels: data.timestamps,
+        //             datasets: [{
+        //                 label: '土壤湿度 (%)',
+        //                 data: data.moisture,
+        //                 borderColor: 'blue'
+        //             }, {
+        //                 label: '温度 (°C)',
+        //                 data: data.temperature,
+        //                 borderColor: 'red'
+        //             }]
+        //         }
+        //     });
+        // }
+
+        // 展示图片（假设图片 URL 从 API 获取）
+        // function renderImage(imageUrl) {
+        //     const img = document.createElement('img');
+        //     img.src = imageUrl;
+        //     document.getElementById('imageContainer').appendChild(img);
+        // }
+
+        // 初始化
+    //     fetchData().then(data => {
+    //         renderChart(data);
+    //         // renderImage(data.latestImage);
+    //     });
+    // </script>
+</body>
+</html>
