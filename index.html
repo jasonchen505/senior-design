@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>A remote environment recording system with online access portals</title>
@@ -8,46 +8,54 @@
     <canvas id="soilChart"></canvas>
     <div id="imageContainer"></div>
 
-<!-- <!--     <script> -->
-        // // 从外部 API 获取数据
-        // async function fetchData() {
-        //     const response = await fetch('https://api.example.com/soil-data');
-        //     const data = await response.json();
-        //     return data;
-        // }
+</body>
+</html> -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>A Remote Environment Recording System with Online Access Portals</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #soilChart { margin: 20px 0; background: #f9f9f9; }
+        #imageContainer { text-align: center; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Real-Time Soil Monitoring System</h1>
+        <p>Access live soil data and environmental metrics</p>
+    </header>
+    <main>
+        <section>
+            <h2>Soil Moisture Levels</h2>
+            <canvas id="soilChart" width="600" height="400"></canvas>
+        </section>
+        <section>
+            <h2>Latest Soil Image</h2>
+            <div id="imageContainer"></div>
+        </section>
+    </main>
 
-        // 绘制图表（使用 Chart.js）
-        // function renderChart(data) {
-        //     const ctx = document.getElementById('soilChart').getContext('2d');
-        //     new Chart(ctx, {
-        //         type: 'line',
-        //         data: {
-        //             labels: data.timestamps,
-        //             datasets: [{
-        //                 label: '土壤湿度 (%)',
-        //                 data: data.moisture,
-        //                 borderColor: 'blue'
-        //             }, {
-        //                 label: '温度 (°C)',
-        //                 data: data.temperature,
-        //                 borderColor: 'red'
-        //             }]
-        //         }
-        //     });
-        // }
+    <script>
+        // init chart
+        const ctx = document.getElementById('soilChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar'],
+                datasets: [{
+                    label: 'Soil Moisture (%)',
+                    data: [65, 59, 80],
+                    borderColor: 'rgb(75, 192, 192)'
+                }]
+            }
+        });
 
-        // 展示图片（假设图片 URL 从 API 获取）
-        // function renderImage(imageUrl) {
-        //     const img = document.createElement('img');
-        //     img.src = imageUrl;
-        //     document.getElementById('imageContainer').appendChild(img);
-        // }
-
-        // 初始化
-    //     fetchData().then(data => {
-    //         renderChart(data);
-    //         // renderImage(data.latestImage);
-    //     });
-    // </script> -->
+        // load image
+        document.getElementById('imageContainer').innerHTML = 
+            '<img src="https://via.placeholder.com/600x300?text=Soil+Sample" alt="Soil Image">';
+    </script>
 </body>
 </html>
